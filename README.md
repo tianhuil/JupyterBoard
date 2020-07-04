@@ -81,4 +81,4 @@ Uploading the notebook `COVID.ipynb` (via the website or `git push`) creates das
 - Functions wrapped in `@cache` are cached based on the cache string provided (e.g. daily or hourly or minutely).
 - The notebook can provide interactive widgets via Jupyter Widgets
 - A new upload updates the notebook
-- When deploying with git, can set `requirements.txt` to extend the default environment
+- When deploying with git, can set `requirements.txt` to extend the default dependency libraries
