@@ -1,8 +1,12 @@
 # JupyterBoard
-Build automatically-updating dashboards from your Jupyter Notebook
+Build automatically-updating hosted dashboards built from your Jupyter Notebooks
 
-## Use Cases:
-These use cases show all the code needed in a Jupyter Notebook to run a self-updating jupyter board.
+## Use Case:
+1. Have a regularly updating stream of data and
+2. Perform some transformations as the data updates and
+3. Plot the results for everyone to see:
+
+For this use case, you need a hosted, regularly automatically-updating dashboard.  Maintaining hosting and updating the dashboard is a pain.  The following use cases show all the code needed in a Jupyter Notebook to build an automatically-updating hosted dashboard.
 
 ### 1. App Usage
 Quick dashbboard for app usage segmented by platform and country.  I want this data updated hourly.
@@ -77,8 +81,8 @@ interactive(plot_ema_by_state, i=iwidget)
 ```
 
 ## How does it work?
-Uploading the notebook `COVID.ipynb` (via the website or `git push`) creates dashboard on `/COVID.ipynb`.
-- Functions wrapped in `@cache` are cached based on the cache string provided (e.g. daily or hourly or minutely).
+Uploading the notebook `COVID.ipynb` (via `JupyterBoard.org` or `git push`) creates dashboard on `JupyterBoard.org/COVID.ipynb`.
+- Functions wrapped in `@cache` are cached based on the cache string provided (e.g. daily or hourly or minutely)
 - The notebook can provide interactive widgets via Jupyter Widgets
 - A new upload updates the notebook
 - When deploying with git, can set `requirements.txt` to extend the default dependency libraries
